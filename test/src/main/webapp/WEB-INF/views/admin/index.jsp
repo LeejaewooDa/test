@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="s"%>
 <%@ page pageEncoding="utf-8" %>
 <div class="jumbotron">
-    <h1>관리자 페이지aaaa</h1>
+    <h1>관리자 페이지bbbbb</h1>
     <p>views/admin/index.jsp</p>
 </div>
 <table class="table table-striped">
