@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org/DTD SQL Map 2.0/EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Excel">
+  <typeAlias alias="Excel" type="excel.upload.domain.Excel"/>
+
+   	<insert id="addExcel" parameterClass="java.util.List">
+		INSERT INTO EXCEL_UPLOAD (SENDER, RECEIVER, DATE) VALUES 
+		<dynamic>
+		    <iterate conjunction=",">
+		        (#list[].sender#, #list[].receiver#, now())        
+		    </iterate>
+		</dynamic>
+	</insert>	
+	
+</sqlMap>
